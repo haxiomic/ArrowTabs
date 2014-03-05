@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs with Pointer</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="../tabs.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="row">
+      <div id="team-tabs" class="tabs large-12 columns">
+        <div class="tab-menu">
+          <a href="#panel-1" title="" class="active"> 
+            <div class="circular-avatar"><span><img src="img/thor.jpg" class="circular-avatar-image"></span></div>
+          </a>
+          <a href="#panel-2" title="">
+            <div class="circular-avatar"><span><img src="img/loki.jpg" class="circular-avatar-image"></span></div>
+          </a>
+          <a href="#panel-3" title="">
+            <div class="circular-avatar"><span><img src="img/odin.jpg" class="circular-avatar-image"></span></div>
+          </a>
+          <a href="#panel-4" title="">
+            <div class="circular-avatar"><span><img src="img/freyja.jpg" class="circular-avatar-image"></span></div>
+          </a>
+          <a href="#panel-5" title="">
+            <div class="circular-avatar"><span><img src="img/baldr.jpg" class="circular-avatar-image"></span></div>
+          </a>
+          <a href="#panel-6" title="">
+            <div class="circular-avatar"><span><img src="img/waffles.jpg" class="circular-avatar-image"></span></div>
+          </a>
+        </div>
+        <div class="tab-menu-pointer-gutter">
+          <div class="tab-menu-pointer"></div>
+        </div>
+        <div class="tab-panels-container panel">
+            <div id="panel-1" class="tab-panel" class="active">
+              <h4>Thor</h4>
+              In Norse mythology, Thor (from Old Norse Þórr) is a hammer-wielding god associated with thunder, lightning, storms, oak trees, strength, the protection of
+            </div>
+            <div id="panel-2" class="tab-panel">
+              <h4>Loki</h4>
+              In Norse mythology, Loki, Loptr, or Hveðrungr is a god or jötunn (or both). Loki is the son of Fárbauti and Laufey, and the brother of Helblindi and Býleistr.
+            </div>
+            <div id="panel-3" class="tab-panel">
+              <h4>Odin</h4>
+              Odin is a major god in most if not all branches of Germanic mythology especially in the Norse mythology branch of Germanic mythology, the Allfather of the gods
+            </div>
+            <div id="panel-4" class="tab-panel">
+              <h4>Freyja</h4>
+              In Norse mythology, Freyja (Old Norse the "Lady") is a goddess associated with love, sexuality, beauty, fertility, gold, seiðr, war, and death.
+            </div>
+            <div id="panel-5" class="tab-panel">
+              <h4>Baldr</h4>
+              Baldr (also Balder, Baldur) is a god of light and purity in Norse mythology, and a son of the god Odin and the goddess Frigg. He has numerous brothers, such as
+            </div>
+            <div id="panel-6" class="tab-panel">
+              <h4>Waffles</h4>
+              A waffle is a leavened batter or dough cooked between two plates, patterned to give a characteristic size, shape and surface impression. There are many variations based on the type of iron and recipe used, with over a dozen regional varieties in Belgium alone.[1]
+              Waffles are eaten throughout the world, particularly in Belgium, France, Netherlands, Scandinavia, and the United States.
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="../tabs.js"></script>
+    <script>
+      //prevent image dragging
+      var disableDragOn = document.getElementsByClassName('circular-avatar-image');
+      var i = disableDragOn.length-1;
+      while(i>=0){
+        disableDragOn[i].ondragstart = function() { return false; };
+        i--;
+      }
+
+      $(document).ready(function ($) {
+        $('#team-tabs').haxtabs();
+      });
+    </script>
+  </body>
+</html>

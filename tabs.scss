@@ -1,0 +1,68 @@
+@import 'bourbon';
+
+$transition-time: .3s;
+$pointer-size: 9px;
+
+.tabs{
+	.tab-transition {
+		@include transition(all $transition-time ease-in-out);
+		@include transition-delay(.0s);
+	}
+
+	.tab-menu{
+		margin-bottom: 20px;
+	}
+
+	.tab-menu-pointer-gutter{
+		position:relative;
+		height: auto;
+		width: 100%;
+		padding: none;
+		margin: none;
+		border: none;
+		top: auto; 
+		left: auto; 
+		right: auto; 
+		bottom: auto; 
+		background-color: transparent;
+	}
+
+	.tab-menu-pointer{
+		position: relative;
+		width: 0; 
+		height: 0; 
+		border-left: $pointer-size solid transparent;
+		border-right: $pointer-size solid transparent;
+		border-bottom: $pointer-size solid red;
+		left: 0px;
+		top: 0px;
+
+		&.animated{
+			@extend .tab-transition;
+		}
+	}
+
+	.tab-panels-container{
+		overflow: hidden;
+		box-sizing: border-box;
+		position: relative;
+
+		&.animated{
+			@include transition(height $transition-time ease-in-out);
+		}
+		
+		.tab-panel{
+			@extend .tab-transition;
+			position: absolute;
+			visibility: hidden;
+			opacity: 0;
+			//left: 20px;
+			//right: 20px;
+		}
+
+		.tab-panel.active{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

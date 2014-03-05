@@ -1,0 +1,51 @@
+@import 'bourbon';
+
+.circular-avatar{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  @include border-top-radius(100%);
+  @include border-bottom-radius(100%);
+  border: 3px solid #fff;
+  background-color: #fff;
+  @include box-shadow(0 1px 1px rgba(0,0,0,0.3));
+}
+
+*.active .circular-avatar{
+  @include box-shadow(0 1px 4px rgba(0,70,255,1));
+}
+
+.circular-avatar span{
+  text-align: center;
+}
+
+.circular-avatar-image{
+  display: block;
+  height: 100%;
+  width: 100%;
+  @include border-top-radius(100%);
+  @include border-bottom-radius(100%);
+  pointer-events: none;/* disable dragging */
+}
+
+/* Customizing Tabs */
+
+//Pointer Color
+.tabs .tab-menu-pointer{
+  border-bottom-color: #f2f2f2;
+}
+
+//Panel container
+.tabs .tab-panels-container{
+  border:none;
+  background-color: #f2f2f2;
+  color: #666;
+  h4{
+    margin-top: 0;
+  }
+}
+
+//Tabs margin
+.tabs .tab-menu{
+  margin-bottom: 20px;
+}

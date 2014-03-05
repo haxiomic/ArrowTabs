@@ -1,0 +1,42 @@
+.circular-avatar {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border: 3px solid #fff;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+
+*.active .circular-avatar {
+  box-shadow: 0 1px 4px #0046ff; }
+
+.circular-avatar span {
+  text-align: center; }
+
+.circular-avatar-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  pointer-events: none;
+  /* disable dragging */ }
+
+/* Customizing Tabs */
+.tabs .tab-menu-pointer {
+  border-bottom-color: #f2f2f2; }
+
+.tabs .tab-panels-container {
+  border: none;
+  background-color: #f2f2f2;
+  color: #666; }
+  .tabs .tab-panels-container h4 {
+    margin-top: 0; }
+
+.tabs .tab-menu {
+  margin-bottom: 20px; }

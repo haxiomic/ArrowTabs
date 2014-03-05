@@ -1,0 +1,53 @@
+.tabs .tab-transition, .tabs .tab-menu-pointer.animated, .tabs .tab-panels-container .tab-panel {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.tabs .tab-menu {
+  margin-bottom: 20px;
+}
+.tabs .tab-menu-pointer-gutter {
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: none;
+  margin: none;
+  border: none;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  background-color: transparent;
+}
+.tabs .tab-menu-pointer {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid red;
+  left: 0px;
+  top: 0px;
+}
+.tabs .tab-panels-container {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.tabs .tab-panels-container.animated {
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+.tabs .tab-panels-container .tab-panel {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.tabs .tab-panels-container .tab-panel.active {
+  opacity: 1;
+  visibility: visible;
+}
