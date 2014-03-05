@@ -1,6 +1,7 @@
 @import 'bourbon';
 
 .circular-avatar{
+  margin: 10px 10px;
   display: inline-block;
   height: 100px;
   width: 100px;
@@ -47,5 +48,6 @@
 
 //Tabs margin
 .tabs .tab-menu{
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  text-align: center;
 }
