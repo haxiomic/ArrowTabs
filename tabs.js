@@ -90,9 +90,9 @@
                 //fade transition
                 panels.removeClass('active');
                 targetPanel.addClass('active');
-                panelsContainer.height(targetPanel.height());
-
-                currentPanel = targetPanel
+                
+                currentPanel = targetPanel;
+                resizeContainerToPanel(currentPanel);
                 //point to
                 setPointerTarget(menuItem);
             });     
