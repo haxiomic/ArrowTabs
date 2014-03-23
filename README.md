@@ -4,5 +4,3 @@ jQuery plugin for tabbed UI with an optional arrow pointing to the menu item. Th
 
 ####Demo
 [justhive.me/#team-tabs](http://justhive.me/#team-tabs)
-
-*v0.1* 
