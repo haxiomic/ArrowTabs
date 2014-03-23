@@ -1,7 +1,7 @@
 /* HaxTabs jQuery Plugin */
 ;(function ( $, window, document, undefined ) {
 
-    var pluginName = "haxtabs",
+    var pluginName = "arrowtabs",
         defaults = {};
 
     function Plugin( element, options ) {
